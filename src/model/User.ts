@@ -31,7 +31,7 @@ export interface Message {
 
 
   export interface User {
-    userName: string;
+    username: string;
     email: string;
     password: string;
     verifyCode: string;
@@ -42,7 +42,7 @@ export interface Message {
   }
 
   const UserSchema = new Schema<User> ({
-    userName: {
+    username: {
         type: String ,
         required: [true, "Username is required"],
         trim: true,
