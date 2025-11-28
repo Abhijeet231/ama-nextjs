@@ -20,3 +20,8 @@ This project is inspired by Hitesh Choudhary’s YouTube tutorial. I’m using t
 
 
 
+## How File based routing works in next.js (Resources to Learn more ..)
+[https://nextjs.org/docs/14/app/building-your-application/routing/defining-routes]
+[https://chatgpt.com/s/t_6929eab4fce8819180a1405ff8f4c396]
+[https://medium.com/@alvarolosada/file-based-routing-in-next-js-13-ac7829f55372]
+

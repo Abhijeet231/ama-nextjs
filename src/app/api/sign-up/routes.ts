@@ -3,6 +3,7 @@ import UserModel from "@/model/User";
 import bcrypt from "bcryptjs";
 
 import { sendVerificationEmail } from "@/helpers/sendVerificationEmail";
+import { success } from "zod";
 
 
 
@@ -34,7 +35,20 @@ export async function POST(request: Request){ // Request is the datatype of requ
     const verifyCode = Math.floor(100000 + Math.random() *900000).toString()
 
     if(existingUserByEmail){
-        //Todo: 
+        if(existingUserByEmail.isVerified){
+            return Response.json({
+                success: false,
+                message: "User already exists with this email!!"
+            }, {status:400})
+        } else {
+            const hashedPassword = await bcrypt.hash(password,10)
+            existingUserByEmail.password = hashedPassword;
+            existingUserByEmail.verifyCode = verifyCode;
+            existingUserByEmail.verifyCodeExpiry = new Date(Date.now() + 3600000);
+
+            await existingUserByEmail.save(); 
+            
+        }
     }else{
        const hashedPassword = await bcrypt.hash(password,10)
        const expiryDate = new Date()
