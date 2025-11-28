@@ -16,6 +16,7 @@ This project is inspired by Hitesh Choudhary’s YouTube tutorial. I’m using t
 - Zod
 - React Hook Form
 - Next Auth/ Auth.js
+- Resend Email
 
 
 
