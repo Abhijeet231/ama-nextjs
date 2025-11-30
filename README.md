@@ -35,3 +35,5 @@ This project is inspired by Hitesh Choudhary’s YouTube tutorial. I’m using t
 
 
 ## How middleware/Proxy works [https://chatgpt.com/s/t_692a85e73d78819189cb6e079432f930]
+
+## Important topics of next.js [https://chatgpt.com/s/t_692b3154e210819183b3fbfe37e4adc2]
